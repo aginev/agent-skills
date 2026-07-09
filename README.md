@@ -4,6 +4,14 @@ A collection of agent skills. Each skill lives in its own directory under
 `skills/` and is defined by a `SKILL.md` file with YAML frontmatter (`name`,
 `description`) followed by the skill's instructions.
 
+## Installation
+
+Install these skills with:
+
+```bash
+npx skills add aginev/agent-skills
+```
+
 ## Available skills
 
 | Skill | Description |
