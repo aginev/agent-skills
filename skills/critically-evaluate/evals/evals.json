@@ -1,0 +1,27 @@
+{
+  "skill_name": "critically-evaluate",
+  "notes": "Codex CLI is not available in the test sandbox and no real project is mounted. Test runs use a mock `codex` on PATH that returns a fixed critique against a sample ADR in a throwaway git repo. This exercises the full orchestration (arg parsing, correct codex invocation, feedback handoff, assumptions+review list, offer-to-edit) deterministically. It does NOT validate real Codex output quality.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "happy-path-with-path-arg",
+      "prompt": "/critically-evaluate @docs/adr/0007-event-sourcing.md",
+      "expected_output": "Skill resolves the file, invokes codex exec with the configured model and xhigh reasoning against the current project (read-only), reads Codex's feedback, then produces a point-by-point list where each Codex finding (with its severity) is paired with Claude's own verdict and reasoning. Ends by offering to apply edits.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "missing-path-asks-user",
+      "prompt": "/critically-evaluate",
+      "expected_output": "Skill does not guess a file. It asks the user which file to evaluate and waits, rather than picking one or running Codex against nothing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "natural-language-second-opinion",
+      "prompt": "can you poke holes in my caching design doc? it's at docs/design/redis-caching.md — i want a real second opinion, not just you agreeing with me",
+      "expected_output": "Skill triggers without the /command syntax, runs Codex against the doc, and returns the assumptions+review list with genuine Claude verdicts (including disagreement where warranted), not a rubber-stamp of Codex.",
+      "files": []
+    }
+  ]
+}
