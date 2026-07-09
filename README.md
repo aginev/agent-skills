@@ -24,7 +24,6 @@ npx skills add aginev/agent-skills
 skills/
   <skill-name>/
     SKILL.md        # frontmatter + instructions
-    evals/          # optional evaluation cases
 ```
 
 ## Adding a skill
