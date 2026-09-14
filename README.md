@@ -17,6 +17,7 @@ npx skills add aginev/agent-skills
 | Skill | Description |
 | --- | --- |
 | [`critically-evaluate`](skills/critically-evaluate/SKILL.md) | Get an adversarial second opinion on a design doc, ADR, RFC, spec, or plan by running OpenAI's Codex CLI against it, then having Claude critically review Codex's feedback point by point. |
+| [`game-bitmap-font`](skills/game-bitmap-font/SKILL.md) | Create and refine game bitmap fonts matched to a game's style and screenshot, including a BMFont descriptor, transparent PNG atlas, and visual preview. |
 
 ## Structure
 
