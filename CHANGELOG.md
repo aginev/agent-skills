@@ -5,6 +5,12 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-10-14
+
+### Added
+
+- `commit` skill: split the working-tree changes into small, logical git commits, show the plan, and commit only after the user confirms.
+
 ## [0.2.0] - 2026-09-14
 
 ### Added
@@ -20,5 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MIT `LICENSE`.
 - `.gitignore` to exclude unnecessary files and directories.
 
+[0.3.0]: https://github.com/aginev/agent-skills/releases/tag/v0.3.0
 [0.2.0]: https://github.com/aginev/agent-skills/releases/tag/v0.2.0
 [0.1.0]: https://github.com/aginev/agent-skills/releases/tag/v0.1.0
